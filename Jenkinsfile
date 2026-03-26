@@ -2,24 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone') {
+        stage('Hello') {
             steps {
-                echo 'Fetching code from GitHub...'
-            }
-        }
-
-        stage('Build') {
-            steps {
-                echo 'Building project...'
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                sh '''
-                sudo rm -rf /var/www/html/*
-                sudo cp -r * /var/www/html/
-                '''
+                echo 'Pipeline working successfully 🚀'
             }
         }
     }
